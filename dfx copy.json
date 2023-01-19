@@ -7,6 +7,19 @@
     "dao": {
       "main": "./src/dao/main.mo",
       "type": "motoko"
+    },
+    "assets": {
+      "dependencies": [
+        "webpage",
+        "dao"
+      ],
+      "frontend": {
+        "entrypoint": "dist/index.html"
+      },
+      "source": [
+        "dist/"
+      ],
+      "type": "assets"
     }
   },
   "defaults": {
@@ -16,7 +29,7 @@
   },
   "networks": {
     "local": {
-      "bind": "127.0.0.1:8200",
+      "bind": "127.0.0.1:8000",
       "type": "ephemeral"
     },
     "ic": {
